@@ -8,6 +8,16 @@
     // Bさんのスコアを国語、数学、英語の順に配列へ入れる
     // ※この処理は変更しないでください。
     int[] bScore = { 42, 95, 60 };
+    
+    double[] averageScore;
+    averageScore = new double[3];
+    averageScore[0] = ((double)aScore[0] + bScore[0]) / 2;
+    averageScore[1] = ((double)aScore[1] + bScore[1]) / 2;
+    averageScore[2] = ((double)aScore[2] + bScore[2]) / 2;
+    
+    double[] totalScore;
+    totalScore = new double[1];
+    totalScore[0] = ((double)averageScore[0]+averageScore[1]+averageScore[2]);		
 
     // ※以降のコメントを参考に、必要な処理を実装してください
  
@@ -56,22 +66,23 @@ table th, table td {
     </tr>
     <tr>
       <td>Aさん</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
+      <td><%out.println(aScore[0]);%></td>
+      <td><%out.println(aScore[1]);%></td>
+      <td><%out.println(aScore[2]);%></td>
     </tr>
     <tr>
       <td>Bさん</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
+      <td><%out.println(bScore[0]);%></td>
+      <td><%out.println(bScore[1]);%></td>
+      <td><%out.println(bScore[2]);%></td>
     </tr>
   </table>
 
   <h2>平均点</h2>
-  <p>国語：xxx</p>
-  <p>数学：xxx</p>
-  <p>英語：xxx</p>
-  <p>合計：xxx</p>
+  <p>国語：<%out.println(averageScore[0]);%></p>
+  <p>数学：<%out.println(averageScore[1]);%></p>
+  <p>英語：<%out.println(averageScore[2]);%></p>
+  <p>合計：<%out.println(totalScore[0]);%></p>
 </body>
 </html>
+
